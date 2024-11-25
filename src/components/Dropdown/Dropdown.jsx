@@ -2,11 +2,11 @@ import React from "react";
 import DropdownButton from "../DropdownButton/DropdownButton";
 import DropdownContent from "../DropdownContent/DropdownContent";
 
-const Dropdown = () => {
+const Dropdown = (buttonText, content) => {
   return (
     <div>
-      <DropdownButton></DropdownButton>
-      <DropdownContent></DropdownContent>
+      <DropdownButton>{buttonText}</DropdownButton>
+      <DropdownContent>{content}</DropdownContent>
     </div>
   );
 };
