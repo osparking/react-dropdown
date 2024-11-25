@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import DropdownButton from "../DropdownButton/DropdownButton";
+import DropdownContent from "../DropdownContent/DropdownContent";
 
 const Dropdown = () => {
   return (
     <div>
-      드롭다운!
+      <DropdownButton></DropdownButton>
+      <DropdownContent></DropdownContent>
     </div>
-  )
-}
+  );
+};
 
-export default Dropdown
+export default Dropdown;
