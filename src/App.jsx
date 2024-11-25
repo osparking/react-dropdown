@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <div className="content">
-        <Dropdown />
+        <Dropdown buttonTest="드롭다운 버튼" content={<p>여러분 안녕!</p>} />
       </div>
     </div>
   );
