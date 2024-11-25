@@ -1,3 +1,5 @@
+# React Dropdown menu creation practice
+- tutorial video: youtube - https://www.youtube.com/watch?v=q6HevBxsPUM
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
