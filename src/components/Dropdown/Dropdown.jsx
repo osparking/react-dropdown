@@ -13,10 +13,10 @@ const Dropdown = ({ buttonText, content }) => {
   const toggleDropdown = () => {
     if (!open) {
       const spaceRemaining =
-        window.innerHeight - buttonRef.current.getBoundingClientRef().bottom;
+        window.innerHeight - buttonRef.current.getBoundingClientRect().bottom;
       const contentHeight = contentRef.current.clientHeight;
-      let topPosition = spaceRemaining - contentHeight;
-      if (topPosition > 0) topPosition = null;
+      const topPosition =
+        spaceRemaining > contentHeight ? null : spaceRemaining - contentHeight;
       setDropdownTop(topPosition);
     }
     setOpen(!open);
