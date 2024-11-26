@@ -6,8 +6,8 @@ import "./Dropdown.css";
 const Dropdown = ({ buttonText, content }) => {
   const [open, setOpen] = useState(false);
   const toggleDropdown = () => {
-    // setOpen(!open);
-    setOpen((open) => !open);
+    setOpen(!open);
+    // setOpen((open) => !open);
   };
   return (
     <div className="dropdown">

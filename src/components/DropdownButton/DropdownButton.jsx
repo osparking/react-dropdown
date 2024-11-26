@@ -10,7 +10,7 @@ const DropdownButton = ({ children, open, toggle }) => {
     >
       {children}
       <span className="toggle-icon">
-        {open ? <SlArrowDown /> : <SlArrowUp />}
+        {open ? <SlArrowUp /> : <SlArrowDown />}
       </span>
     </div>
   );
