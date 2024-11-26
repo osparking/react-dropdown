@@ -1,11 +1,12 @@
 import React from "react";
 import { SlArrowDown } from "react-icons/sl";
+import "./DropdownButton.css";
 
 const DropdownButton = ({ children }) => {
   return (
-    <div>
+    <div className="dropdown-btn">
       {children}
-      <span>
+      <span className="toggle-icon">
         <SlArrowDown />
       </span>
     </div>

@@ -1,7 +1,7 @@
 import React from "react";
 
-const DropdownContent = () => {
-  return <div>DropdownContent</div>;
+const DropdownContent = ({ children }) => {
+  return <div>{children}</div>;
 };
 
 export default DropdownContent;
