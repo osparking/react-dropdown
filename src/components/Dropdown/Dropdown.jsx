@@ -6,6 +6,9 @@ import "./Dropdown.css";
 const Dropdown = ({ buttonText, content }) => {
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef();
+  const buttonRef = useRef();
+  const contentRef = useRef();
+
   const toggleDropdown = () => {
     setOpen(!open);
   };
@@ -24,10 +27,12 @@ const Dropdown = ({ buttonText, content }) => {
   }, []);
   return (
     <div className="dropdown" ref={dropdownRef}>
-      <DropdownButton toggle={toggleDropdown} open={open}>
+      <DropdownButton ref={buttonRef} toggle={toggleDropdown} open={open}>
         {buttonText}
       </DropdownButton>
-      <DropdownContent open={open}>{content}</DropdownContent>
+      <DropdownContent ref={contentRef} open={open}>
+        {content}
+      </DropdownContent>
     </div>
   );
 };

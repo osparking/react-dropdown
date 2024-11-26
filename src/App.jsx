@@ -4,7 +4,7 @@ import Dropdown from "./components/Dropdown/Dropdown";
 import DropdownItem from "./components/DropdownItem/DropdownItem";
 
 function App() {
-  const items = [1, 2, 3, 4];
+  const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
   return (
     <div className="App">
