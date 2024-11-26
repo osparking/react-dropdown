@@ -1,13 +1,16 @@
 import React from "react";
-import { SlArrowDown } from "react-icons/sl";
+import { SlArrowDown, SlArrowUp } from "react-icons/sl";
 import "./DropdownButton.css";
 
-const DropdownButton = ({ children }) => {
+const DropdownButton = ({ children, open, toggle }) => {
   return (
-    <div className="dropdown-btn">
+    <div
+      onClick={toggle}
+      className={`dropdown-btn ${open ? "button-open" : null}`}
+    >
       {children}
       <span className="toggle-icon">
-        <SlArrowDown />
+        {open ? <SlArrowDown /> : <SlArrowUp />}
       </span>
     </div>
   );
