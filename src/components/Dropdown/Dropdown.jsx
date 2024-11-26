@@ -5,11 +5,20 @@ import "./Dropdown.css";
 
 const Dropdown = ({ buttonText, content }) => {
   const [open, setOpen] = useState(false);
+  const [dropdownTop, setDropdownTop] = useState(0);
   const dropdownRef = useRef();
   const buttonRef = useRef();
   const contentRef = useRef();
 
   const toggleDropdown = () => {
+    if (!open) {
+      const spaceRemaining =
+        window.innerHeight - buttonRef.current.getBoundingClientRef().bottom;
+      const contentHeight = contentRef.current.clientHeight;
+      let topPosition = spaceRemaining - contentHeight;
+      if (topPosition > 0) topPosition = null;
+      setDropdownTop(topPosition);
+    }
     setOpen(!open);
   };
   useEffect(() => {
@@ -30,7 +39,7 @@ const Dropdown = ({ buttonText, content }) => {
       <DropdownButton ref={buttonRef} toggle={toggleDropdown} open={open}>
         {buttonText}
       </DropdownButton>
-      <DropdownContent ref={contentRef} open={open}>
+      <DropdownContent top={dropdownTop} ref={contentRef} open={open}>
         {content}
       </DropdownContent>
     </div>
